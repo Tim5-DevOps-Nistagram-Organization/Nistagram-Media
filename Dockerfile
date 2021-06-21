@@ -12,3 +12,5 @@ RUN mvn package -Pdev -DskipTests
 FROM openjdk:11.0-jdk as nistagramMediaMicroserviceRuntime
 COPY --from=nistagramMediaMicroserviceBuild /usr/src/server/target/*.jar nistagram-media.jar
 CMD java -jar nistagram-media.jar
+
+
